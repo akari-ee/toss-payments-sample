@@ -257,24 +257,29 @@ export default function Home() {
                       <div className="font-medium text-gray-800 dark:text-white">
                         {order.amount?.toLocaleString()}원
                       </div>
-
                       <div className="text-gray-600 dark:text-gray-300">
+                        결제수단
+                      </div>
+                      <div className="font-medium text-gray-800 dark:text-white">
+                        {order.payment_method || "N/A"}
+                      </div>
+                      <div className="font-medium text-gray-600 dark:text-gray-300">
                         주문일
                       </div>
-                      <div className="text-gray-700 dark:text-gray-300">
+                      <div className="font-medium text-gray-700 dark:text-gray-300">
                         {new Date(order.created_at).toLocaleString()}
                       </div>
 
-                      <div className="text-gray-600 dark:text-gray-300">
+                      <div className="font-medium text-gray-600 dark:text-gray-300">
                         결제일
                       </div>
-                      <div className="text-gray-700 dark:text-gray-300">
+                      <div className="font-medium text-gray-700 dark:text-gray-300">
                         {order.paid_at
                           ? new Date(order.paid_at).toLocaleString()
                           : "N/A"}
                       </div>
 
-                      <div className="text-gray-600 dark:text-gray-300">
+                      <div className="font-medium text-gray-600 dark:text-gray-300">
                         결제상태
                       </div>
                       <div>
